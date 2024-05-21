@@ -1,0 +1,2 @@
+interests.nextButton: Next
+interests.android.interestList: //android.widget.TextView[@resource-id="Typography" and @text="${interestName}"]

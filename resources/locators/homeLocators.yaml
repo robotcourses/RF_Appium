@@ -1,0 +1,6 @@
+home.homeScreen: HomeScreen
+home.homeButton: BottomTab_Home
+home.discoverButton: BottomTab_Discover
+home.surpriseMeButton: BottomTab_SurpriseMe
+home.myLibraryButton: BottomTab_MyLibrary
+home.podcastButton: BottomTab_Podcasts
