@@ -9,4 +9,4 @@
 
 ## ADQUIRA A CAMISA COM A ESTAMPA DO POST NA ROBOT STORE
 
-[![Utilizando Gherkin no Robot Framework](https://rsv-ink-images-production.s3.sa-east-1.amazonaws.com/images/product_v2/main_image/e15c214a0eb63ef3e4becb971b7ce486.webp)
+[![Utilizando Gherkin no Robot Framework](https://github.com/robotcourses/RF_Appium/assets/144608203/3d2d2add-ea33-4b95-a205-e22ab00a7bbd)](https://reserva.ink/robotstore/product/i-am-appium)
