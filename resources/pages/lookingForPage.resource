@@ -6,9 +6,9 @@ Select Looking For
     [Arguments]
     ...  ${lookingForName}
 
-    ${element}  Replace Variables    ${lookingFor.android.lookingForList}
+    # ${element}  Replace Variables    ${lookingFor.android.lookingForList}
 
-    Wait Until Element Is Visible    ${element}
-    Click Element    ${element}
+    Wait Until Element Is Visible    ${lookingFor.android.lookingForList.format(param='${lookingForName}')}
+    Click Element    ${lookingFor.android.lookingForList.format(param='${lookingForName}')}
 
     Click Element    ${lookingFor.nextButton}

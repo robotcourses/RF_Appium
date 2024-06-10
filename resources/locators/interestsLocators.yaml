@@ -1,2 +1,4 @@
-interests.nextButton: Next
-interests.android.interestList: //android.widget.TextView[@resource-id="Typography" and @text="${interestName}"]
+interests:
+  nextButton: Next
+  android:
+    interestList: //android.widget.TextView[@resource-id="Typography" and @text="{param}"]

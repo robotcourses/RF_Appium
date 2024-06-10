@@ -1,2 +1,4 @@
-lookingFor.nextButton: Next
-lookingFor.android.lookingForList: //android.widget.TextView[@resource-id="Typography" and @text="${lookingForName}"]
+lookingFor:
+  nextButton: Next
+  android:
+    lookingForList: //android.widget.TextView[@resource-id="Typography" and @text="{param}"]

@@ -1,2 +1,3 @@
-welcome.nextButton: Next
-welcome.signInButton: SignInLink
+welcome:
+  nextButton: Next
+  signInButton: SignInLink

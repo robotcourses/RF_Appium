@@ -1,1 +1,2 @@
-signIn.skipButton: SkipSignInLink
+signIn:
+  skipButton: SkipSignInLink

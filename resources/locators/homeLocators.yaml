@@ -1,6 +1,7 @@
-home.homeScreen: HomeScreen
-home.homeButton: BottomTab_Home
-home.discoverButton: BottomTab_Discover
-home.surpriseMeButton: BottomTab_SurpriseMe
-home.myLibraryButton: BottomTab_MyLibrary
-home.podcastButton: BottomTab_Podcasts
+home:
+  homeScreen: HomeScreen
+  homeButton: BottomTab_Home
+  discoverButton: BottomTab_Discover
+  surpriseMeButton: BottomTab_SurpriseMe
+  myLibraryButton: BottomTab_MyLibrary
+  podcastButton: BottomTab_Podcasts
