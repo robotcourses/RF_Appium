@@ -6,9 +6,8 @@ Select Interests
     [Arguments]
     ...  ${interestName}
 
-    # ${element}  Replace Variables    ${interests.android.interestList}
-
     Wait Until Element Is Visible    ${interests.${PLATFORM_NAME}.interestList.format(param='${interestName}')}
     Click Element    ${interests.${PLATFORM_NAME}.interestList.format(param='${interestName}')}
 
+    Wait Until Element Is Enabled    ${interests.nextButton}
     Click Element    ${interests.nextButton}

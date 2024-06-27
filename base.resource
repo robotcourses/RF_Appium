@@ -18,7 +18,8 @@ Resource    resources/pages/welcomePage.resource
 
 ## Utils
 Resource    resources/utils/openApp.resource
+Resource    resources/utils/userKeywords.resource
 
 *** Variables ***
 ${PLATFORM_NAME}  android
-${DEVICE_NAME}    Google Pixel 7
+${DEVICE_NAME}    Google Pixel 7 Pro
