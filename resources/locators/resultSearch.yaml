@@ -1,0 +1,5 @@
+resultSearch:
+  android:
+    cacheableImage: xpath=(//android.widget.ImageView[@resource-id="CacheableImage"])[1]
+    videoTitle: //android.widget.TextView[@resource-id="VideoTitle"]
+    videoSpeaker: //android.widget.TextView[@resource-id="VideoSpeakers"]

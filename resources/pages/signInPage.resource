@@ -4,5 +4,4 @@ Resource    ../../base.resource
 *** Keywords ***
 Skip Sing In
 
-    Wait Until Element Is Visible    ${signIn.skipButton}
-    Click Element    ${signIn.skipButton}
+    Wait Visible And Click Element    ${signIn.skipButton}

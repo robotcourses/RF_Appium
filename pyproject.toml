@@ -12,6 +12,7 @@ robotframework-appiumlibrary = "2.0.0"
 appium-python-client = "3.2.1"
 docutils = "0.20.1"
 PyYAML = "6.0.1"
+requests = "^2.32.3"
 
 [build-system]
 requires = ["poetry-core"]
