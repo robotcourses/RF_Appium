@@ -16,6 +16,7 @@ Cenário: Acessar TED sem Login
     View Home
 
 Cenário: Realizar Pesquisa Por um Video
+    [Tags]    c2
 
     Click in Lets Go
     Select Interests    Technology

@@ -9,14 +9,15 @@ Search Video
 
 Select Search Video
 
-    Wait Until Element Is Visible    ${search.${PLATFORM_NAME}.resultList}
+    Wait Until Element Is Visible    ${search.${PLATFORM_NAME}.resultSearch}
 
-    ${result}  Get Text    ${search.${PLATFORM_NAME}.resultList}
+    ${result}  Get Text    ${search.${PLATFORM_NAME}.resultText}
     ${speaker}  ${title}  Split String    ${result}    separator=:${SPACE}
 
     Set Test Variable    ${speaker}
     Set Test Variable    ${title}
 
-    ##TODO    Problema no click do elemento, retirar o segundo click posteriormente
-    Click Element    ${search.${PLATFORM_NAME}.resultList}
-    Click Element    ${search.${PLATFORM_NAME}.resultList}
+    Hide Keyboard
+    Click Element    ${search.${PLATFORM_NAME}.resultSearch}
+    #TODO Rever a necessidade desse segundo click
+    Click Element    ${search.${PLATFORM_NAME}.resultSearch}
