@@ -64,3 +64,27 @@ Send Test Status To Browserstack
         ...  reason=${TEST_MESSAGE}
         ...  auth=${BROWSERSTACK_AUTHORIZATION}
     END
+
+
+Swipe Until Element Is Visible
+    [Arguments]    ${locator}
+
+
+    Set Local Variable    ${start_x}    550
+    Set Local Variable    ${start_y}    1260
+
+    WHILE    ${True}
+        ${status}    Run Keyword And Return Status    Wait Until Element Is Visible    ${locator}
+
+        IF    ${status}
+            Exit For Loop
+        ELSE
+            Set Local Variable    ${offset_x}    ${${start_x} + 5}
+        END
+
+        Swipe    
+        ...    start_x=${start_x}
+        ...    start_y=${start_y}
+        ...    offset_x=${offset_x}
+        ...    offset_y=0
+    END
