@@ -2,7 +2,7 @@
 Resource    ../../base.resource
 
 *** Keywords ***
-Select Interests
+Select Interest 
     [Arguments]
     ...  ${interestName}
 

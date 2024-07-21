@@ -8,22 +8,19 @@ Test Teardown   Run Keywords
 
 *** Test Cases ***
 Cenário: Acessar TED sem Login
-
-    Click in Lets Go
-    Select Interests    Technology
+    Click In Lest Go
+    Select Interest    Technology
     Select Looking For    Professional growth
     Skip Sing In
     View Home
 
 Cenário: Realizar Pesquisa Por um Video
-    [Tags]    c2
-
-    Click in Lets Go
-    Select Interests    Technology
-    Select Looking For    Professional growth
-    Skip Sing In
-    View Home
+    Access TED APP Without Login    interest=Technology    lookingFor=Professional growth
     Click In Browse Tab Icon
     Search Video    Technology
     Select Search Video
     View Result Search
+
+Cenário: Acessar Surpreenda-me
+    Access TED APP Without Login    interest=Technology    lookingFor=Professional growth
+    Click in Surprise Me

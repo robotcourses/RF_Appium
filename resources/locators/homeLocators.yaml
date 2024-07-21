@@ -2,6 +2,7 @@ home:
   homeScreen: HomeScreen
   homeButton: BottomTab_Home
   discoverButton: BottomTab_Discover
-  surpriseMeButton: BottomTab_SurpriseMe
   myLibraryButton: BottomTab_MyLibrary
   podcastButton: BottomTab_Podcasts
+  android:
+    surpriseMeButton: //android.widget.TextView[@resource-id="Typography" and @text="Surprise me!"]

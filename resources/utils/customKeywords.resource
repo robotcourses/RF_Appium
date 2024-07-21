@@ -68,23 +68,32 @@ Send Test Status To Browserstack
 
 Swipe Until Element Is Visible
     [Arguments]    ${locator}
+    
+    ${x}  Get Window Width
+    ${y}  Get Window Height
 
-
-    Set Local Variable    ${start_x}    550
-    Set Local Variable    ${start_y}    1260
+    ${start_x}  Evaluate  ${x} / 2
+    ${start_y}  Evaluate  ${y} / 2
 
     WHILE    ${True}
-        ${status}    Run Keyword And Return Status    Wait Until Element Is Visible    ${locator}
+        ${status}    Run Keyword And Return Status    Wait Until Element Is Visible    ${locator}  1
 
         IF    ${status}
             Exit For Loop
-        ELSE
-            Set Local Variable    ${offset_x}    ${${start_x} + 5}
         END
 
         Swipe    
         ...    start_x=${start_x}
         ...    start_y=${start_y}
-        ...    offset_x=${offset_x}
+        ...    offset_x=${start_x}
         ...    offset_y=0
     END
+
+Access TED APP Without Login
+    [Arguments]    ${interest}    ${lookingFor}
+
+    Click In Lest Go
+    Select Interest    ${interest}
+    Select Looking For    ${lookingFor}
+    Skip Sing In
+    View Home

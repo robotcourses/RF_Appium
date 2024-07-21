@@ -2,6 +2,6 @@
 Resource    ../../base.resource
 
 *** Keywords ***
-Click in Lets Go
+Click In Lest Go
 
     Wait Visible And Click Element    ${welcome.nextButton}
