@@ -2,7 +2,7 @@
 
 ![I AM APPIUM](docs/thumb_readme.png)
 
-## TECNOLOGIAS UTILIZADAS
+## 👨‍💻 TECNOLOGIAS UTILIZADAS
 
 - Python: https://www.python.org/downloads/release/python-3810/
 - Poetry: https://python-poetry.org/docs/
@@ -16,18 +16,20 @@
         - Android iOS Emulator: https://marketplace.visualstudio.com/items?itemName=DiemasMichiels.emulate
 
 
-## CONFIGURAÇÃO DO POETRY
+## 🖥️ CONFIGURAÇÃO DO POETRY
 
 [![POETRY](https://img.youtube.com/vi/1z4JDp-Ky9g/0.jpg)](https://www.youtube.com/watch?v=1z4JDp-Ky9g)
 
 
-## INSTALANDO DEPENDÊNCIAS DO PROJETO
+## 🦾 INSTALANDO DEPENDÊNCIAS DO PROJETO
 
 ```
 poetry install
 ```
 
 ## 🎥 PLAYLIST COM A CONSTRUÇÃO DO PROJETO
+
+Todo a construção do projeto está explicada nessa playlist. Mostrando toda a estruturação, cada keyword utilizada, de uma forma que você consiga entender bem.
 
 [![Playlist Robot Courses](docs/playlist_image.png)](https://www.youtube.com/playlist?list=PLQjtMqeGwTRUqay20tOdwS3oJio4Jt6YJ)
 
