@@ -1,6 +1,6 @@
 # 📱 Automação Mobile com Robot Framework e Appium
 
-![I AM APPIUM](docs\thumb_readme.png)
+![I AM APPIUM](docs/thumb_readme.png)
 
 ## TECNOLOGIAS UTILIZADAS
 
@@ -29,7 +29,7 @@ poetry install
 
 ## 🎥 PLAYLIST COM A CONSTRUÇÃO DO PROJETO
 
-[![alt text](docs\playlist_image.png))](https://www.youtube.com/playlist?list=PLQjtMqeGwTRUqay20tOdwS3oJio4Jt6YJ)
+[![alt text](docs/playlist_image.png))](https://www.youtube.com/playlist?list=PLQjtMqeGwTRUqay20tOdwS3oJio4Jt6YJ)
 
 
 ## 📗 POSTS
