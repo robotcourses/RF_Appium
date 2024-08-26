@@ -41,7 +41,7 @@ jobs:
 
     steps:
       - name: Execute Tests
-        run: robot -d log -i login .
+        run: poetry run robot -d log -i login .
 
       - name: Upload logs and reports
         uses: actions/upload-artifact@v3
