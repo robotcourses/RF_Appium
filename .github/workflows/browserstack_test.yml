@@ -50,7 +50,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Download reports
         uses: actions/download-artifact@v1
@@ -58,6 +58,8 @@ jobs:
           name: reports
 
       - name: Send report to commit
-        uses: joonvena/robotframework-reporter-action@v2.5
+        uses: joonvena/robotframework-reporter-action@v2.4
         with:
           gh_access_token: ${{ secrets.GITHUB_TOKEN }}
+          sha: ${{ github.sha }}
+          pull_request_id: ${{ github.event.number }}
