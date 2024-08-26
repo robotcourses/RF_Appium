@@ -43,9 +43,10 @@ jobs:
         with:
           name: reports
           path: reports
+
   generate_report:
     if: always()
-    needs: [test]   
+    needs: [execute_test]   
     runs-on: ubuntu-latest
 
     steps:
