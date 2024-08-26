@@ -7,7 +7,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.8"
-robotframework = "7.0"
+robotframework = "7.0.1"
 robotframework-appiumlibrary = "2.0.0"
 appium-python-client = "3.2.1"
 docutils = "0.20.1"
