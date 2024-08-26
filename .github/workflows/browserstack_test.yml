@@ -37,26 +37,18 @@ jobs:
       - name: Execute Tests
         run: poetry run robot -d log -i login .
 
-      - name: Upload logs and reports
-        uses: actions/upload-artifact@v3
-        if: always()
-        with:
-          name: log
-          path: ./log
-          retention-days: 1
+      # - name: Upload logs and reports
+      #   uses: actions/upload-artifact@v3
+      #   if: always()
+      #   with:
+      #     name: log
+      #     path: ./log
+      #     retention-days: 1
 
-  generate_report:
-      if: always()
-      needs: [execute_test] 
-      runs-on: ubuntu-latest
-
-      steps:
-      - uses: actions/checkout@v2
-
-      - name: Download reports
-        uses: actions/download-artifact@v1
-        with:
-          name: log
+      # - name: Download reports
+      #   uses: actions/download-artifact@v1
+      #   with:
+      #     name: log
 
       - name: Send report to commit
         uses: joonvena/robotframework-reporter-action@v2.5
