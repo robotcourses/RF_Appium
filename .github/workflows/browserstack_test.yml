@@ -19,7 +19,7 @@ jobs:
         run: |
           echo "BROWSERSTACK_USERNAME=${{ secrets.BROWSERSTACK_USERNAME }}" >> .env
           echo "BROWSERSTACK_ACCESS_KEY=${{ secrets.BROWSERSTACK_ACCESS_KEY }}" >> .env
-          ecno "GH_ACTIONS_RUNNER=${{ github.run_number }}" >> .env
+          echo "GH_ACTIONS_RUNNER=${{ github.run_number }}" >> .env
 
       - uses: actions/setup-python@v3
         with:
