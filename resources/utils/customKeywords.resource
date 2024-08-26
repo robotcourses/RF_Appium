@@ -53,19 +53,6 @@ Swipe to Element
         ...    offset_y=0
     END
 
-Send Test Status To Browserstack
-
-    ${session_id}  Get Appium SessionId
-
-    IF    '${EMULATOR}' == 'browserstack'
-        Scenario Status
-        ...  session_id=${session_id}
-        ...  status=${TEST_STATUS}
-        ...  reason=${TEST_MESSAGE}
-        ...  auth=${BROWSERSTACK_AUTHORIZATION}
-    END
-
-
 Swipe Until Element Is Visible
     [Arguments]    ${locator}
     

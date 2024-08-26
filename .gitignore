@@ -7,3 +7,4 @@ selenium-screenshot-*
 geckodriver-*
 poetry.lock
 .vscode
+.env
