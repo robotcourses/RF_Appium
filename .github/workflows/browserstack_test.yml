@@ -37,8 +37,8 @@ jobs:
       - name: Execute Tests
         run: poetry run robot -d reports .
 
-      - name: Send report to commit
+      - name: Generate Report
         if: always()
-        uses: joonvena/robotframework-reporter-action@v2.4
+        uses: joonvena/robotframework-reporter-action@v2.1
         with:
           gh_access_token: ${{ secrets.GITHUB_TOKEN }}
