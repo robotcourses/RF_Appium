@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  execute_test:
     runs-on: ubuntu-latest
 
     steps:
@@ -33,28 +33,6 @@ jobs:
 
       - name: Install Dependencies
         run: poetry install --no-root
-
-      - name: Cache Poetry Environment
-        uses: actions/cache@v3
-        with:
-          path: ./.venv
-          key: ${{ runner.os }}-poetry-${{ hashFiles('**/poetry.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-poetry-
-
-  execute_test:
-    if: always()
-    needs: build 
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Restore Poetry environment
-        uses: actions/cache@v3
-        with:
-          path: ./.venv
-          key: ${{ runner.os }}-poetry-${{ hashFiles('**/poetry.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-poetry-
 
       - name: Execute Tests
         run: poetry run robot -d log -i login .
