@@ -43,11 +43,12 @@ jobs:
         with:
           name: reports
           path: reports
-
   generate_report:
-      runs-on: ubuntu-latest
+    if: always()
+    needs: [test]   
+    runs-on: ubuntu-latest
 
-      steps:
+    steps:
       - uses: actions/checkout@v2
 
       - name: Download reports
