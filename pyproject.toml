@@ -7,13 +7,14 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.8"
-robotframework = "^7.0"
+robotframework = "7.0"
 robotframework-appiumlibrary = "2.0.0"
 appium-python-client = "3.2.1"
 docutils = "0.20.1"
 PyYAML = "6.0.1"
-requests = "^2.32.3"
-robotframework-browserstack = "^0.1.1"
+requests = "2.32.3"
+robotframework-browserstack = "0.1.1"
+python-dotenv = "1.0.1"
 
 [build-system]
 requires = ["poetry-core"]

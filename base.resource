@@ -1,7 +1,10 @@
 *** Settings ***
+## Carrega as variáveis do arquivo `.env`
+Library    resources/lib/DotEnv.py
+
 ## Bibliotecas
 Library    AppiumLibrary  timeout=30
-Library    BrowserstackLibrary    username=${BROWSERSTACK_USERNAME}  access_key=${BROWSERSTACK_ACCESS_KEY}
+Library    BrowserstackLibrary    username=%{BROWSERSTACK_USER_NAME=${None}}  access_key=%{BROWSERSTACK_ACCESS_KEY=${None}}
 Library    String
 
 ## Utils
@@ -29,7 +32,7 @@ Resource    resources/pages/resultSearchPage.resource
 *** Variables ***
 ${PLATFORM_NAME}   android
 ${EMULATOR}        browserstack    #local ou browserstack
-${BROWSERSTACK_USER_NAME}        robotcourses_P7GMVF
-${BROWSERSTACK_ACCESS_KEY}       yAs2TMrqtBUnAfS8EHqX
+# ${BS_USER_NAME}        %{BROWSERSTACK_USER_NAME=${None}}
+# ${BS_ACCESS_KEY}       %{BROWSERSTACK_ACCESS_KEY=${None}}
 &{BROWSERSTACK_OPTIONS}          appiumVersion=2.0.1
 ${APP_DOWNLOAD_URL}              %{APP_DOWNLOAD_URL=${None}}

@@ -84,3 +84,11 @@ Access TED APP Without Login
     Select Looking For    ${lookingFor}
     Skip Sing In
     View Home
+
+Send App To Browserstack
+    IF    '${EMULATOR}' == 'browserstack'
+        Upload Application to Browserstack
+        ...    app_name=ted.apk
+        ...    app_path=${CURDIR}${/}..${/}app${/}app.apk
+        ...    custom_id=TED_OUVINTE_123
+    END
