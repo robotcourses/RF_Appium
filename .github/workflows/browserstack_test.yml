@@ -35,7 +35,7 @@ jobs:
         run: poetry install --no-root
 
       - name: Execute Tests
-        run: poetry run robot -d log -i login .
+        run: poetry run robot -d reports -i login .
 
       # - name: Upload logs and reports
       #   uses: actions/upload-artifact@v3
