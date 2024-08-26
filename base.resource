@@ -4,7 +4,7 @@ Library    resources/lib/DotEnv.py
 
 ## Bibliotecas
 Library    AppiumLibrary  timeout=30
-Library    BrowserstackLibrary    username=%{BROWSERSTACK_USER_NAME=${None}}  access_key=%{BROWSERSTACK_ACCESS_KEY=${None}}
+Library    BrowserstackLibrary    username=%{BROWSERSTACK_USERNAME=${None}}  access_key=%{BROWSERSTACK_ACCESS_KEY=${None}}
 Library    String
 
 ## Utils

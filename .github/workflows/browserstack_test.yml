@@ -17,7 +17,7 @@ jobs:
 
       - name: Create .env file
         run: |
-          echo "BROWSERSTACK_USER_NAME=${{ secrets.BROWSERSTACK_USER_NAME }}" >> .env
+          echo "BROWSERSTACK_USERNAME=${{ secrets.BROWSERSTACK_USERNAME }}" >> .env
           echo "BROWSERSTACK_ACCESS_KEY=${{ secrets.BROWSERSTACK_ACCESS_KEY }}" >> .env
           ecno "GH_ACTIONS_RUNNER=${{ github.run_number }}" >> .env
 
