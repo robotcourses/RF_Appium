@@ -35,10 +35,27 @@ jobs:
         run: poetry install --no-root
 
       - name: Execute Tests
-        run: poetry run robot -d reports .
+        run: poetry run robot -d reports -i login .
 
-      - name: Generate Report
+      - name: Upload test results
+        uses: actions/upload-artifact@v1
         if: always()
-        uses: joonvena/robotframework-reporter-action@v2.1
+        with:
+          name: reports
+          path: reports
+
+  generate_report:
+      runs-on: ubuntu-latest
+
+      steps:
+      - uses: actions/checkout@v2
+
+      - name: Download reports
+        uses: actions/download-artifact@v1
+        with:
+          name: reports
+
+      - name: Send report to commit
+        uses: joonvena/robotframework-reporter-action@v2.5
         with:
           gh_access_token: ${{ secrets.GITHUB_TOKEN }}
