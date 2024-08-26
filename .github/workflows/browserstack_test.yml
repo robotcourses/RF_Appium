@@ -42,4 +42,3 @@ jobs:
         uses: joonvena/robotframework-reporter-action@v2.4
         with:
           gh_access_token: ${{ secrets.GITHUB_TOKEN }}
-          failed_tests_on_top: true
