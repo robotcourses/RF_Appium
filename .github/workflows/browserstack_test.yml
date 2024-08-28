@@ -35,7 +35,20 @@ jobs:
         run: poetry install --no-root
 
       - name: Execute Tests
+        id: execute_test
         run: poetry run robot -d reports .
+
+
+      - name: Execute Flaky Tests
+        if: teps.execute_test.outcome == 'failure'
+        run: |
+          robot -d ./logs --rerunfailed ./logs/output.xml --output ./logs/rerun.xml .
+
+      - name: Merge Test Reports
+        if: teps.execute_test.outcome == 'failure'
+        run: |
+          rebot -d logs --merge logs/output.xml logs/rerun.xml
+
 
       - name: Upload test results
         uses: actions/upload-artifact@v1
