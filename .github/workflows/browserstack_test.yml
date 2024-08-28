@@ -42,7 +42,7 @@ jobs:
       - name: Execute Flaky Tests
         if: steps.execute_test.outcome != 'success'
         run: |
-          poetry run robot -d ./reports --rerunfailed ./reports/output.xml --output ./reports/rerun.xml .
+          poetry run robot -d ./reports --rerunfailed ./reports/output.xml --output rerun.xml .
 
       - name: Merge Test Reports
         if: steps.execute_test.outcome != 'success'

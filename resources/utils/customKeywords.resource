@@ -92,3 +92,12 @@ Send App To Browserstack
         ...    app_path=${CURDIR}${/}..${/}app${/}app.apk
         ...    custom_id=TED_OUVINTE_123
     END
+
+Cancel Version Update
+
+    ${deniedButton}  Set Variable  //android.widget.Button[@resource-id="android:id/button2"]
+    ${status}  Run Keyword And Return Status    Wait Until Element Is Visible    ${deniedButton}
+
+    IF    ${status}
+        Wait Visible And Click Element    ${deniedButton}
+    END
