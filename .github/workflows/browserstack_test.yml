@@ -37,17 +37,17 @@ jobs:
       - name: Execute Tests
         id: execute_test
         run: poetry run robot -d reports .
-
+        continue-on-error: true
 
       - name: Execute Flaky Tests
+        if: steps.execute_test.outcome != 'success'
         run: |
-          robot -d ./logs --rerunfailed ./logs/output.xml --output ./logs/rerun.xml .
-        continue-on-error: true
+          poetry run robot -d ./logs --rerunfailed ./logs/output.xml --output ./logs/rerun.xml .
 
       - name: Merge Test Reports
+        if: steps.execute_test.outcome != 'success'
         run: |
-          rebot -d logs --merge logs/output.xml logs/rerun.xml
-        continue-on-error: true
+          poetry run rebot -d logs --merge logs/output.xml logs/rerun.xml
 
       - name: Upload test results
         uses: actions/upload-artifact@v1
