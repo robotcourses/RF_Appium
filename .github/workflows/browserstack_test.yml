@@ -40,12 +40,12 @@ jobs:
 
 
       - name: Execute Flaky Tests
-        if: teps.execute_test.outcome == 'failure'
+        if: steps.execute_test.outcome == 'failure'
         run: |
           robot -d ./logs --rerunfailed ./logs/output.xml --output ./logs/rerun.xml .
 
       - name: Merge Test Reports
-        if: teps.execute_test.outcome == 'failure'
+        if: steps.execute_test.outcome == 'failure'
         run: |
           rebot -d logs --merge logs/output.xml logs/rerun.xml
 
