@@ -96,7 +96,7 @@ Send App To Browserstack
 Cancel Version Update
 
     ${deniedButton}  Set Variable  //android.widget.Button[@resource-id="android:id/button2"]
-    ${status}  Run Keyword And Return Status    Wait Until Element Is Visible    ${deniedButton}
+    ${status}  Run Keyword And Return Status    Wait Until Element Is Visible    ${deniedButton}  timeout=3
 
     IF    ${status}
         Wait Visible And Click Element    ${deniedButton}
