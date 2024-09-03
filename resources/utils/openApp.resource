@@ -18,7 +18,7 @@ Open TED App
         ...  platformName=${PLATFORM_NAME}
         ...  deviceName=Google Pixel 7 Pro
         ...  project=TED_ROBOTCOURSES
-        ...  build=TED_%{GH_ACTIONS_RUNNER=0}
+        ...  build=TED_%{GH_ACTIONS_RUNNER=LOCAL}
         ...  name=${TEST_NAME}
         ...  bstack:options=${BROWSERSTACK_OPTIONS}
         ...  disableIdLocatorAutocompletion=${True}
