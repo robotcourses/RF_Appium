@@ -50,29 +50,16 @@ jobs:
         run: |
           poetry run rebot -d ./reports --merge ./reports/output.xml ./reports/rerun.xml
 
-      - name: Upload test results
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: reports
-          path: reports
-
-  generate_report:
-    if: always()
-    needs: [execute_test]   
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Download reports
-        uses: actions/download-artifact@v4
-        with:
-          name: reports
-
       - name: Send report to commit
         uses: joonvena/robotframework-reporter-action@v2.4
         with:
           gh_access_token: ${{ secrets.GITHUB_TOKEN }}
           sha: ${{ github.sha }}
           pull_request_id: ${{ github.event.number }}
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reports
+          path: reports
