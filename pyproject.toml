@@ -1,21 +1,22 @@
-[tool.poetry]
+[project]
 name = "rf-appium"
 version = "0.1.0"
 description = "Automação Mobile Com Appium e Robot Framework"
-authors = ["Vinicius Trindade <vinicius.trindade@gmail.com>"]
+authors = [
+    {name = "Robot Courses",email = "git@robotcourses.com.br"}
+]
 readme = "README.md"
+requires-python = ">=3.9,<4.0"
+dependencies = [
+    "docutils (>=0.22,<0.23)",
+    "robotframework (>=7.3.2,<8.0.0)",
+    "pyyaml (>=6.0.2,<7.0.0)",
+    "robotframework-browserstack (>=0.1.1,<0.2.0)",
+    "python-dotenv (>=1.1.1,<2.0.0)",
+    "robotframework-appiumlibrary (>=3.1,<4.0)"
+]
 
-[tool.poetry.dependencies]
-python = "^3.8"
-robotframework = "7.0.1"
-robotframework-appiumlibrary = "2.0.0"
-appium-python-client = "3.2.1"
-docutils = "0.20.1"
-PyYAML = "6.0.1"
-requests = "2.32.3"
-robotframework-browserstack = "0.1.1"
-python-dotenv = "1.0.1"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"

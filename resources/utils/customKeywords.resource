@@ -49,8 +49,8 @@ Swipe to Element
         Swipe
         ...    start_x=${start_x}
         ...    start_y=${start_y}
-        ...    offset_x=${offset_x}
-        ...    offset_y=0
+        ...    end_x=${offset_x}
+        ...    end_y=0
     END
 
 Swipe Until Element Is Visible
@@ -62,8 +62,8 @@ Swipe Until Element Is Visible
     ${start_x}  Evaluate  ${x} / 2
     ${start_y}  Evaluate  ${y} / 2
 
-    WHILE    ${True}    limit=15s
-        ${status}    Run Keyword And Return Status    Wait Until Element Is Visible    ${locator}  1
+    WHILE    ${True}    limit=20
+        ${status}    Run Keyword And Return Status    Wait Until Element Is Visible    ${locator}    timeout=0.5
 
         IF    ${status}
             Exit For Loop
@@ -72,8 +72,8 @@ Swipe Until Element Is Visible
         Swipe    
         ...    start_x=${start_x}
         ...    start_y=${start_y}
-        ...    offset_x=${start_x}
-        ...    offset_y=0
+        ...    end_x=${start_x}
+        ...    end_y=0
     END
 
 Access TED APP Without Login
@@ -91,6 +91,12 @@ Send App To Browserstack
         ...    app_name=ted.apk
         ...    app_path=${CURDIR}${/}..${/}app${/}app.apk
         ...    custom_id=TED_OUVINTE_123
+    END
+
+Update Browserstack
+
+    IF    '${EMULATOR}' == 'browserstack'
+        Update Test Case Status in BrowserStack
     END
 
 Cancel Version Update
