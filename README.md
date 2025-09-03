@@ -35,5 +35,5 @@ Todo a construção do projeto está explicada nessa playlist. Mostrando toda a 
 
 
 ## 📗 POSTS
-- [Robot Framework e Appium | PARTE 1 – O que é o Appium?](https://robotcourses.com.br/robot-framework-appium-1/)
-- [Robot Framework e Appium | PARTE 2 – Configurando o Ambiente](https://robotcourses.com.br/robot-framework-e-appium-parte-2-configurando-o-ambiente/)
+- [Robot Framework e Appium | PARTE 1 – O que é o Appium?](https://robotcourses.substack.com/p/robot-framework-e-appium-parte-1)
+- [Robot Framework e Appium | PARTE 2 – Configurando o Ambiente](hhttps://robotcourses.substack.com/p/robot-framework-e-appium-parte-2)
