@@ -37,7 +37,7 @@ Swipe to Element
     ${start_x}  Set Variable  550
     ${start_y}  Set Variable  1260
 
-    WHILE    ${True}    limit=NONE
+    WHILE    ${True}    limit=15s
         ${status}  Run Keyword And Return Status  Wait Until Element Is Visible    ${locator}
 
         IF    ${status}
@@ -62,7 +62,7 @@ Swipe Until Element Is Visible
     ${start_x}  Evaluate  ${x} / 2
     ${start_y}  Evaluate  ${y} / 2
 
-    WHILE    ${True}
+    WHILE    ${True}    limit=15s
         ${status}    Run Keyword And Return Status    Wait Until Element Is Visible    ${locator}  1
 
         IF    ${status}
