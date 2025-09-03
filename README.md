@@ -2,6 +2,10 @@
 
 ![I AM APPIUM](docs/thumb_readme.png)
 
+## 📗 POSTS
+- [Robot Framework e Appium | PARTE 1 – O que é o Appium?](https://robotcourses.substack.com/p/robot-framework-e-appium-parte-1)
+- [Robot Framework e Appium | PARTE 2 – Configurando o Ambiente](hhttps://robotcourses.substack.com/p/robot-framework-e-appium-parte-2)
+
 ## 👨‍💻 TECNOLOGIAS UTILIZADAS
 
 - Python: https://www.python.org/downloads/release/python-3810/
@@ -32,8 +36,3 @@ poetry install
 Todo a construção do projeto está explicada nessa playlist. Mostrando toda a estruturação, cada keyword utilizada, de uma forma que você consiga entender bem.
 
 [![Playlist Robot Courses](docs/playlist_image.png)](https://www.youtube.com/playlist?list=PLQjtMqeGwTRUqay20tOdwS3oJio4Jt6YJ)
-
-
-## 📗 POSTS
-- [Robot Framework e Appium | PARTE 1 – O que é o Appium?](https://robotcourses.substack.com/p/robot-framework-e-appium-parte-1)
-- [Robot Framework e Appium | PARTE 2 – Configurando o Ambiente](hhttps://robotcourses.substack.com/p/robot-framework-e-appium-parte-2)
