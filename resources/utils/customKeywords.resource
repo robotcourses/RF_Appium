@@ -52,7 +52,7 @@ Swipe to Element
         ...    end_x=${offset_x}
         ...    end_y=0
     END
-
+*** Keywords ***
 Swipe Until Element Is Visible
     [Arguments]    ${locator}
     
@@ -60,13 +60,13 @@ Swipe Until Element Is Visible
     ${y}  Get Window Height
 
     ${start_x}  Evaluate  ${x} / 2
-    ${start_y}  Evaluate  ${y} / 2
+    ${start_y}  Evaluate  ${y} - 500
 
-    WHILE    ${True}    limit=20
+    WHILE    ${True}    limit=5  on_limit=PASS
         ${status}    Run Keyword And Return Status    Wait Until Element Is Visible    ${locator}    timeout=0.5
 
         IF    ${status}
-            Exit For Loop
+            RETURN
         END
 
         Swipe    
@@ -75,6 +75,8 @@ Swipe Until Element Is Visible
         ...    end_x=${start_x}
         ...    end_y=0
     END
+
+    Fail    Element '${locator}' not found!
 
 Access TED APP Without Login
     [Arguments]    ${interest}    ${lookingFor}
